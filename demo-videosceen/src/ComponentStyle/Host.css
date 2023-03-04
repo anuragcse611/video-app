@@ -1,0 +1,44 @@
+.sidegrid{
+    height: 20%;
+    background-image: url('../images/person2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+}
+
+.maingrid{
+    height: 100%;
+    background-image: url('../images/person2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    background-size: cover;
+}
+
+.smallimg{
+
+    height: 20%;
+    width: 20%;
+    bottom: 0%;
+    background-image: url('../images/person2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+
+}
+
+.participant {
+    background-color: #FDE9A9;
+    border: 1px solid white;
+    border-radius: 25px;
+    position: relative;
+    width: 60%;
+    height: 20px;
+    top: 85%;
+    box-shadow: 5px 5px 10px -5px #cc3300;
+    color: #F15A24;
+    font-size: 13px;;
+    
+   }
