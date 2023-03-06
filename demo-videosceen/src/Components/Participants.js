@@ -6,8 +6,9 @@ import IconButton from '@mui/material/IconButton';
 import CallIcon from '@mui/icons-material/Call';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff';
+import song from '../sounds/buzzer.mp3';
 
-let soundPath = '/sounds/buzz.wav';
+let time = -1;
 
 const Participants = () => {
   const [time, setTime] = useState(null);
@@ -28,23 +29,29 @@ const Participants = () => {
   }, []);
 
   useEffect(() => {
+   
     const intervalId = setInterval(() => {
       if (time > 0) {
         setTime((prevTime) => prevTime - 1);
-      } else {
+      } else  {
         clearInterval(intervalId);
-        const audio = new Audio(soundPath);
-        audio.addEventListener("loadedmetadata", () => {
-          audio.play();
-        });
-        audio.load();
       }
     }, 1000);
+
+    
+    
+    if(time === 0) {
+
+      let audio1 = new Audio(song);
+      audio1.play();
+    
+    }
     return () => {
       clearInterval(intervalId);
     };
   }, [time]);
-
+  
+ 
 
   const buttons = [
     <IconButton key="1" aria-label="call" color="primary" style={{ backgroundColor: '#c4c4c4', borderRadius: '50%', margin: '10px' }} ><VideocamOffIcon /></IconButton>,
@@ -53,6 +60,7 @@ const Participants = () => {
 
   ];
   return (
+ 
 
     <Grid container style={{ height: '100vh', }}>
 
@@ -68,12 +76,15 @@ const Participants = () => {
           <Grid item className='sidegrid' >
             <div className='participant'>Participant3</div>
           </Grid>
-          <div style={{ color: 'white', position: 'relative', justifyContent: 'center', left: 15 }}>
-            <h1> {time}</h1>
+          <div style={{ color: 'white', position: 'absolute', left: '85%', bottom:'80%' }}>
+            {!time ? '' : 
+            <h2> {time} Secs Left</h2>
+                }
           </div>
         </Grid>
         <Grid item xs={10} className='maingrid'>
           <Grid container style={{ height: '100%' }}>
+            <p style ={{color: 'white'}}>vsbib</p>
             <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', marginBottom: 20 }}>
               {/* remove marginBottom for fit to bottom */}
               <Grid container spacing={2} justifyContent="center">
