@@ -31,20 +31,23 @@ const Participants = () => {
     const intervalId = setInterval(() => {
       if (time > 0) {
         setTime((prevTime) => prevTime - 1);
-      } else {
+      } else  {
         clearInterval(intervalId);
-        const audio = new Audio(soundPath);
-        audio.addEventListener("canplaythrough", () => {
-          audio.play();
-        });
-        audio.load();
       }
     }, 1000);
+    if(time === 0) {
+      const audio = new Audio(soundPath);
+      audio.addEventListener("canplaythrough", () => {
+        audio.play();
+      });
+      audio.load();
+    }
     return () => {
       clearInterval(intervalId);
     };
   }, [time]);
-
+  
+ 
 
   const buttons = [
     <IconButton key="1" aria-label="call" color="primary" style={{ backgroundColor: '#c4c4c4', borderRadius: '50%', margin: '10px' }} ><VideocamOffIcon /></IconButton>,
@@ -68,8 +71,10 @@ const Participants = () => {
           <Grid item className='sidegrid' >
             <div className='participant'>Participant3</div>
           </Grid>
-          <div style={{ color: 'white', position: 'relative', justifyContent: 'center', left: 15 }}>
-            <h1> {time}</h1>
+          <div style={{ color: 'white', position: 'absolute', left: '85%', bottom:'80%' }}>
+            {!time ? '' : 
+            <h2> {time} Secs Left</h2>
+                }
           </div>
         </Grid>
         <Grid item xs={10} className='maingrid'>
