@@ -5,14 +5,14 @@ import '../ComponentStyle/Host.css';
 import IconButton from '@mui/material/IconButton';
 import CallIcon from '@mui/icons-material/Call';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
-import VideocamOffIcon from '@mui/icons-material/VideocamOff';;
+import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 
+let soundPath ='/sounds/buzz.wav'
 
 const Participants = () => {
   const [time, setTime] = useState(null);
-  let timevar = time;
-  //console.log(timevar)
-  const [ws, setWs] = useState(null);
+  
+  const [ws, setWs] = useState(null); 
 
   useEffect(() => {
     const newWs = new WebSocket('ws://localhost:8000/');
@@ -31,13 +31,15 @@ const Participants = () => {
     const intervalId = setInterval(() => {
       if (time > 0) {
         setTime((prevTime) => prevTime - 1);
+      } else {
+        clearInterval(intervalId);
+        const audio = new Audio(soundPath);
+        audio.addEventListener("canplaythrough", () => {
+          audio.play();
+        });
+        audio.load();
       }
     }, 1000);
-    if (time === 0) {
-      clearInterval(intervalId);
-      const audio = new Audio('../sounds/sound.mp3');
-      audio.play();
-    }
     return () => {
       clearInterval(intervalId);
     };
