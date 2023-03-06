@@ -35,16 +35,16 @@ const Host = () => {
   };
 
   const buttons = [
-    <IconButton key="1" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><VideocamOffIcon /></IconButton>,
-    <IconButton key="2" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><VolumeOffIcon /></IconButton>,
-    <IconButton key="3" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><StopScreenShareIcon /></IconButton>,
-    <IconButton key="4" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><CallIcon /></IconButton>,
+    <IconButton key="1" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><VideocamOffIcon /></IconButton>,
+    <IconButton key="2" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><VolumeOffIcon /></IconButton>,
+    <IconButton key="3" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><StopScreenShareIcon /></IconButton>,
+    <IconButton key="4" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }}><CallIcon /></IconButton>,
   ];
 
   const buttons1 = [
-    <IconButton key="5" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(15)}> 15s</IconButton>,
-    <IconButton key="6" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(30)}> 30s</IconButton>,
-    <IconButton key="7" aria-label="call" color="primary" style={{ backgroundColor: 'grey', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(45)}> 45s</IconButton>,
+    <IconButton key="5" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(15)}> 15s</IconButton>,
+    <IconButton key="6" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(30)}> 30s</IconButton>,
+    <IconButton key="7" aria-label="call" color="primary" style={{ backgroundColor: '#fff', borderRadius: '50%', margin: '10px', fontSize: '1.5rem' }} onClick={() => handleTimeChange(45)}> 45s</IconButton>,
   ];
   return (
     <Grid container spacing={0} style={{ height: '100vh' }}>

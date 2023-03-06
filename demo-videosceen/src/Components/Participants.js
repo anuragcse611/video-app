@@ -7,7 +7,7 @@ import CallIcon from '@mui/icons-material/Call';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 
-let soundPath ='/sounds/buzz.wav'
+let soundPath = '/sounds/buzz.wav';
 
 const Participants = () => {
   const [time, setTime] = useState(null);
@@ -34,7 +34,7 @@ const Participants = () => {
       } else {
         clearInterval(intervalId);
         const audio = new Audio(soundPath);
-        audio.addEventListener("canplaythrough", () => {
+        audio.addEventListener("loadedmetadata", () => {
           audio.play();
         });
         audio.load();
