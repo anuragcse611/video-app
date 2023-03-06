@@ -49,50 +49,50 @@ const Host = () => {
   return (
     <Grid container spacing={0} style={{ height: '100vh' }}>
       <Grid item xs={6} style={gridStyle}>
-      <div className='part1'>Participant1</div>
+        <div className='part1'>Participant1</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Participant1</Paper>
-       
+
       </Grid>
       <Grid item xs={6} style={gridStyle}>
-      <div className='part1'>Participant2</div>
+        <div className='part1'>Participant2</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 2</Paper>
       </Grid>
       <Grid item xs={6} style={gridStyle}>
-      <div className='part1'>Participant3</div>
+        <div className='part1'>Participant3</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 3</Paper>
       </Grid>
       <Grid item xs={6} style={gridStyle}>
-      <div className='part1'>Participant4</div>
+        <div className='part1'>Participant4</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 4</Paper>
       </Grid>
 
-<Grid item xs={12} style={{}}>
-  <Grid
-    container
-    spacing={0}
-    justifyContent="center" // align buttons horizontally to the center
-    alignItems="center" // center buttons vertically
-   
+      <Grid item xs={12} style={{}}>
+        <Grid
+          container
+          spacing={0}
+          justifyContent="center" // align buttons horizontally to the center
+          alignItems="center" // center buttons vertically
 
-    className='lastgrid'
-    
-    style={{
-      flexWrap: "wrap",
-    }}
-  >
-   
-    {buttons}
-    <p style={{ color: "white", textAlign: "center" ,left:'5px'}}>
-      Counter Timer --
-    </p>
-    {buttons1}
-  
 
-    <Grid className="smalimg"  style = {{position:'absolute', left:'83%', bottom:'10px'}}></Grid>
-   
-  </Grid>
-</Grid>
-</Grid>
+          className='lastgrid'
+
+          style={{
+            flexWrap: "wrap",
+          }}
+        >
+
+          {buttons}
+          <p style={{ color: "white", textAlign: "center", left: '5px' }}>
+            Counter Timer --
+          </p>
+          {buttons1}
+
+
+          <Grid className="smalimg" style={{ position: 'absolute', left: '83%', bottom: '10px' }}></Grid>
+
+        </Grid>
+      </Grid>
+    </Grid>
   );
 };
 
