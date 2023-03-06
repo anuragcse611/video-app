@@ -6,8 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import CallIcon from '@mui/icons-material/Call';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
 
 import song from '../sounds/buzzer.mp3';
 
@@ -70,7 +69,7 @@ const Participants = () => {
       <Grid container >
         {/* // color match krwana h */}
         <Grid item xs={2} style={{ background: '#3E54AC', height: '100%', border: '1px solid white' }}>
-        <VideocamOffIcon />
+      
           <Grid item className='sidegrid' >
             <div className='participant'>Participant1</div>
           </Grid>
