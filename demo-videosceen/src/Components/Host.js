@@ -49,15 +49,20 @@ const Host = () => {
   return (
     <Grid container spacing={0} style={{ height: '100vh' }}>
       <Grid item xs={6} style={gridStyle}>
+      <div className='part1'>Participant1</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Participant1</Paper>
+       
       </Grid>
       <Grid item xs={6} style={gridStyle}>
+      <div className='part1'>Participant2</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 2</Paper>
       </Grid>
       <Grid item xs={6} style={gridStyle}>
+      <div className='part1'>Participant3</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 3</Paper>
       </Grid>
       <Grid item xs={6} style={gridStyle}>
+      <div className='part1'>Participant4</div>
         <Paper style={{ backgroundColor: 'transparent' }}>Item 4</Paper>
       </Grid>
 

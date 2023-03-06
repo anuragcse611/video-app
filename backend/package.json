@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +15,6 @@
     "socket.io": "^4.6.1",
     "websocket": "^1.0.34",
     "ws": "^8.12.1"
-  }
+  },
+  "description": ""
 }
