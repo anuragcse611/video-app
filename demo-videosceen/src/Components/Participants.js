@@ -84,9 +84,10 @@ const Participants = () => {
         </Grid>
         <Grid item xs={10} className='maingrid'>
           <Grid container style={{ height: '100%' }}>
-            <p style ={{color: 'white'}}>vsbib</p>
+         
             <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', marginBottom: 20 }}>
               {/* remove marginBottom for fit to bottom */}
+              <div className='hosticon'>Host</div>
               <Grid container spacing={2} justifyContent="center">
                 {buttons}
               </Grid>

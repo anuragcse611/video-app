@@ -34,11 +34,28 @@
     border: 1px solid white;
     border-radius: 25px;
     position: relative;
-    width: 60%;
+    width: 40%;
     height: 20px;
     top: 85%;
     box-shadow: 5px 5px 10px -5px #cc3300;
     color: #F15A24;
-    font-size: 13px;;
+    font-size: 13px;
+    text-align: center;
     
+   }
+
+   .hosticon{
+
+    
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 10%;
+    height: 20px;
+    top: 85%;
+    box-shadow: 5px 5px 10px -5px #cc3300;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    
+
    }
